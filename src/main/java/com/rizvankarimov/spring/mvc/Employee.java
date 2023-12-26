@@ -2,11 +2,20 @@ package com.rizvankarimov.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private double salary;
     private String department;
+    private String carBrand;
+    private Map<String,String> carBrands;
+
+
+
+
 
     public Employee(String name, String surname, String salary, String department) {
         this.name = name;
@@ -16,7 +25,10 @@ public class Employee {
     }
 
     public Employee() {
-
+        carBrands = new HashMap<>();
+        carBrands.put("BMW", "BMW");
+        carBrands.put("Audi", "Audi");
+        carBrands.put("Mercedes-Benz", "Mercedes-Benz");
     }
 
     @Override
@@ -42,6 +54,14 @@ public class Employee {
     public String getDepartment() {
         return department;
     }
+    public Map<String, String> getCarBrands() {
+        return carBrands;
+    }
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+
 
 
     // setters
@@ -56,5 +76,11 @@ public class Employee {
     }
     public void setDepartment(String department) {
         this.department = department;
+    }
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+    public void setCarBrands(Map<String, String> carBrands) {
+        this.carBrands = carBrands;
     }
 }

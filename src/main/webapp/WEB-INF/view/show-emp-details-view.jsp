@@ -18,6 +18,7 @@ Your name:  ${employee.name} <br>
 Your surname: ${employee.surname} <br>
 Your department: ${employee.department} <br>
 Your salary: ${employee.salary} €<br>
+Your car: ${employee.carBrand}
 <br />
 <br />
 <button onclick="window.location.href='http://localhost:8080/spring_course_mvc/askDetails'">Back</button>
