@@ -10,11 +10,16 @@
 
 
 <%--@elvariable id="employee" type="com.rizvankarimov.spring.mvc.Employee"--%>
-<form:form action="showDetails" modelAttribute="employee">
+<form:form action="showDetails" modelAttribute="employee" cssClass="border-black" >
     Name: <form:input path="name" /><br/>
     Surname: <form:input path="surname" /><br/>
     Salary: <form:input path="salary" /><br/>
-    Department: <form:input path="department" /><br/>
+    Department: <form:select path="department">
+    <form:option value="IT" label="IT"/>
+    <form:option value="HR" label="HR"/>
+    <form:option value="Sales" label="Sales"/>
+    <form:option value="Marketing" label="Marketing"/>
+    </form:select><br/>
 
     <input type="submit" value="OK"/>
 </form:form>
